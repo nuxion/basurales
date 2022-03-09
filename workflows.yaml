@@ -1,0 +1,47 @@
+project:
+  description: null
+  name: basurales
+  projectid: E96FV8XMjh
+  repository: null
+  username: null
+version: 0.1.0
+workflows:
+- alias: preprocesamiento
+  description: 1 Preprocesamiento
+  docker_version: latest
+  enabled: true
+  jobid: 00311453c0fd27318e7fdbb9
+  machine: default
+  nb_name: 1_Preprocesamiento
+  notifications_fail: null
+  notifications_ok: null
+  params:
+    TIMEOUT: 5
+  schedule: null
+  timeout: 10800
+- alias: entrenamiento
+  description: 2 Entrenamiento
+  docker_version: latest
+  enabled: true
+  jobid: 00311453c08cd86fe614dd0b
+  machine: default
+  nb_name: 2_Entrenamiento
+  notifications_fail: null
+  notifications_ok: null
+  params:
+    TIMEOUT: 5
+  schedule: null
+  timeout: 10800
+- alias: Prediccion
+  description: 3 Prediccion
+  docker_version: latest
+  enabled: true
+  jobid: 00311453c0ab8ec65bed10b1
+  machine: default
+  nb_name: 3_Prediccion
+  notifications_fail: null
+  notifications_ok: null
+  params:
+    TIMEOUT: 5
+  schedule: null
+  timeout: 10800
