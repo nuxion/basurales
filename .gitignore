@@ -338,7 +338,6 @@ tags
 .envrc
 multiproc/*.db
 models/
-data/
 .env.docker
 
 # nodejs

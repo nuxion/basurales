@@ -338,7 +338,6 @@ tags
 .envrc
 .git/
 multiproc/
-data/
 datasets/
 models/
 dask-worker-space/
