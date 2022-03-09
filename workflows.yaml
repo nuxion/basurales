@@ -16,7 +16,11 @@ workflows:
   notifications_fail: null
   notifications_ok: null
   params:
-    TIMEOUT: 5
+    GFS_PUBLIC_ROUTE: "dym-datasets-public/basurales/"
+    DATA_DATE: "2021-02-01_2021-02-28"
+    IMAGES_OUTPUT: "images_s2/"
+    BASE_PATH: "/app"
+    GET_IMAGES: 2
   schedule: null
   timeout: 10800
 - alias: entrenamiento

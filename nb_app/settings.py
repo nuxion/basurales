@@ -34,13 +34,14 @@ BASE_PATH = nbvars.get("NB_BASEPATH", os.getcwd())
 # this project.
 DOCKER_IMAGE = {
     "maintener": "NB Workflows <package@nbworkflows.com>",
-    "image": "python:3.8.10-slim",
+    # "image": "python:3.8.10-slim",
+    "image": "debian:bullseye-backports",
     # TODO:
     # Should be managed in the server
     # Would it have to be based on the id of the user?
     "user": {"uid": 1000, "gid": 1000},
-    "build_packages": "build-essential libopenblas-dev git",
-    "final_packages": "vim-tiny libgl1-mesa-dev libgtk2.0-dev curl otb-bin otb-qgis python3-otb gdal-bin git",
+    "build_packages": "build-essential libopenblas-dev git python3-dev python3 python3-pip gdal-bin libgdal-dev python3-gdal ruby-full",
+    "final_packages": "python3 python3-pip vim-tiny libgl1-mesa-dev libgtk2.0-dev curl git otb-bin otb-qgis gdal-bin python3-gdal",
 }
 
 DOCKER_COMPOSE = {
