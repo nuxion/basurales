@@ -19,7 +19,7 @@ RUN groupadd app -g 1090 \
     && useradd -m -d /home/app app -u 1089 -g 1090 \
     && apt-get update -y  \
     && apt-get install -y --no-install-recommends \
-    vim-tiny
+    vim-tiny libgl1-mesa-dev
 COPY --from=builder --chown=app:app /root/.local /home/app/.local/
 COPY --chown=app:app . /app
 
