@@ -38,9 +38,9 @@ DOCKER_IMAGE = {
     # TODO:
     # Should be managed in the server
     # Would it have to be based on the id of the user?
-    "user": {"uid": 1089, "gid": 1090},
+    "user": {"uid": 1000, "gid": 1000},
     "build_packages": "build-essential libopenblas-dev git",
-    "final_packages": "vim-tiny libgl1-mesa-dev libgtk2.0-dev",
+    "final_packages": "vim-tiny libgl1-mesa-dev libgtk2.0-dev curl otb-bin otb-qgis python3-otb gdal-bin git",
 }
 
 DOCKER_COMPOSE = {

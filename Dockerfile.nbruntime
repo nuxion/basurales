@@ -15,11 +15,11 @@ RUN apt-get -y update \
     # && pip install --user /tmp/nb_workflows-0.5.0-py3-none-any.whl
 FROM python:3.8.10-slim as app
 LABEL maintener="NB Workflows <package@nbworkflows.com>"
-RUN groupadd app -g 1090 \
-    && useradd -m -d /home/app app -u 1089 -g 1090 \
+RUN groupadd app -g 1000 \
+    && useradd -m -d /home/app app -u 1000 -g 1000 \
     && apt-get update -y  \
     && apt-get install -y --no-install-recommends \
-    vim-tiny libgl1-mesa-dev libgtk2.0-dev
+    vim-tiny libgl1-mesa-dev libgtk2.0-dev curl otb-bin otb-qgis python3-otb gdal-bin git
 COPY --from=builder --chown=app:app /root/.local /home/app/.local/
 COPY --chown=app:app . /app
 
