@@ -40,7 +40,7 @@ DOCKER_IMAGE = {
     # Would it have to be based on the id of the user?
     "user": {"uid": 1089, "gid": 1090},
     "build_packages": "build-essential libopenblas-dev git",
-    "final_packages": "vim-tiny libgl1-mesa-dev",
+    "final_packages": "vim-tiny libgl1-mesa-dev libgtk2.0-dev",
 }
 
 DOCKER_COMPOSE = {
